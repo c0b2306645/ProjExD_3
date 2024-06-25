@@ -150,7 +150,8 @@ class Score:#
         self.score = 0
         self.img = self.fonto.render(f"スコア:{self.score}", 0, self.color)
 
-    def update(self, screen: pg.Surface):
+
+    def update(self, screen: pg.Surface):  
         """
         爆弾を速度ベクトルself.vx, self.vyに基づき移動させる
         引数 screen：画面Surface
@@ -238,7 +239,7 @@ def main():
                 beam.update(screen)  
 
         for bomb in bombs:
-            bomb.update(screen)
+            bomb.update(screen)  
 
         for exp in explosions:
             exp.update(screen)
